@@ -1,105 +1,56 @@
+# lanupro-vocabulary
 
-# 📊 lanupro_vocabulary_2025
+Welcome to the **lanupro vocabulary** repository! This project hosts lanupro naming conventions used in lab data templates.
 
-> General-purpose R data science project — analysis, modeling, or visualization using reproducible workflows.
+Excel masterfile lab templates are linked via Power Query for streamlined integration of the existing naming conventions.
 
----
+## Getting Started
 
-## 🧠 Overview
+### Using the naming conventions
 
-This project explores [topic/problem]. It follows a typical data science workflow:
+The naming conventions are integrated in the lanupro lab templates. Just use the lab templates for your data:
 
-- Data collection & loading
-- Data cleaning & preprocessing
-- Exploratory Data Analysis (EDA)
-- Statistical modeling or machine learning
-- Visualization and interpretation
-- Reporting
+[masterfile_incubations](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/raw/refs/heads/master/data/raw_results/masterfile_incubations.xlsx)
 
----
+### Changing the naming conventions
 
-## 📁 Project Structure
+*If a name is not present in the Lanupro lab template, you have to update the lanupro_vocabulary*
 
-```bash
-.
-├── data/
-│   ├── raw/            # Original raw datasets
-│   ├── raw_results/    # Intermediate data which first have been processed in excel (eg masterfiles)
-│   └── processed/      # Data processed by scripts and/or notebooks and saved afterwards
-├── notebooks_code/     # RMarkdown or Quarto notebooks and scripts
-├── figures/            # Generated figures and visualizations
-├── docs/               # Documentation files (reports, PDFs)
-├── functions/          # Custom R scripts or functions
-├── renv/               # renv environment files
-├── renv.lock           # Lockfile for reproducible R environment
-├── .Rprofile           # Initializes renv on project load
-├── README.md           # Project overview
+1.  Choose the right vocabulary file depending on your analysis and download the excel file from github:
 
-```
+| Download | Preview |
+|------------------------------------|------------------------------------|
+| [lanupro_vocabulary_general](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/raw/refs/heads/master/data/raw_results/lanupro_vocabulary_general.xlsx) | [lanupro_vocabulary_general](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/blob/master/data/processed/lanupro_vocabulary_general.csv) |
+| [lanupro_vocabulary_fatty_acids](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/raw/refs/heads/master/data/raw_results/lanupro_vocabulary_fatty_acids.xlsx) | [lanupro_vocabulary_fatty_acids](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/blob/master/data/processed/lanupro_vocabulary_fatty_acids.csv) |
+| [lanupro_vocabulary_incbuations](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/raw/refs/heads/master/data/raw_results/masterfile_incubations.xlsx) | [lanupro_vocabulary_incubations](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/blob/master/data/processed/lanupro_vocabulary_incubations.csv) |
 
----
+2.  Edit locally: add your new names
 
-## ⚙️ Getting Started
+3.  Upload the file on:\
+    <https://github.com/lanupro-analytics/lanupro_vocabulary_2025/upload/master/data/raw_results>
 
-### 📦 Clone and Initialize the Environment
+    Drag of choose the file, add an optional message and press "Commit"
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/project-name.git
-   cd project-name
-   ```
+    ![](docs/upload.png)
 
-2. Open the project in RStudio (or R terminal).
+4.  Refresh the power query of your lab file to import the latest naming conventions: ready for use!
 
-3. The `renv` environment will activate automatically. Run:
-   ```r
-   # Load settings + check R version matches renv.lock
-    source(here("functions/settings.R"))
-    check_renv_r_version_match()  # 🛑 Stops if R version is incompatible
+    ![](docs/refresh_query.png)
 
-  # Ensure renv is available and activate it
-    if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-    renv::activate()
+### Contribute to the coding
 
-  # Restore exact package versions (no updates)
-    renv::restore(prompt = FALSE, repos = NULL)
-   ```
-   This will install all required packages as specified in `renv.lock`.
+Only required when you want to actively contribute to the coding, not for the names in excel format
 
----
+-   R (version 4.0 or higher recommended)\
+-   RStudio\
+-   Git\
+-   Access to the `lanupro` GitHub organization\
+-   Power Query-compatible software (e.g., Microsoft Excel)
 
-## 📊 Data
+How to contribute:
 
-- **Source**: [e.g., camera, sensor, lab data]
-- **Format**: CSV, RDS, Excel, etc.
-- **Size**: [Optional]
+1.  Fork the repo
 
-> ⚠️ If the data cannot be shared directly, include instructions to download it.
+2.  Make a branch (e.g. feature/my-fix)
 
----
-
-## 📈 Results
-
-- Include key findings, performance metrics (if modeling), or visualizations.
-- Example:  
-  - RMSE: `0.432`  
-  - AUC: `0.87`  
-  - [Report (HTML)](reports/final_report.html)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Author
-
-**Stijn**
-GitHub: [@yourusername](https://github.com/yourusername)  
-Email: your.email@example.com
-
----
-
-> Contributions welcome. Open an issue or pull request to propose changes or suggest improvements.
+3.  Open a Pull Request back to themain branch
