@@ -8,9 +8,7 @@ Excel masterfile lab templates are linked via Power Query for streamlined integr
 
 ### Using the naming conventions
 
-The naming conventions are integrated in the lanupro lab templates. Just use the lab templates for your data:
-
-[masterfile_incubations](https://github.com/lanupro-analytics/lanupro_vocabulary_2025/raw/refs/heads/master/data/raw_results/masterfile_incubations.xlsx)
+The naming conventions are integrated in the lanupro lab templates. Just use the lab templates for your data.
 
 ### Changing the naming conventions
 
